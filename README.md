@@ -41,7 +41,7 @@ Open http://localhost:5173. Vite proxies `/api` to `localhost:8000`. To point at
 | `back_row_depth` | box area < threshold |
 | `empty_gap` | class name contains `empty`, `gap` or `space` |
 
-The default area threshold is 55% of the median product box area (returned as `settings.suggested_min_area`). In the UI, the toggles and the Min Box Area slider recompute classifications, KPIs, the table and the canvas overlay instantly in the browser — no re-upload needed.
+The default area threshold is 55% of the median product box area (returned as `settings.suggested_min_area`). In the UI, the toggles and the Min Box Area slider recompute classifications, KPIs, the table and the canvas overlay instantly in the browser no re-upload needed.
 
 ## Notes
 
