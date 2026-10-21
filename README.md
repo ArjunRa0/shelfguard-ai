@@ -1,6 +1,16 @@
 # Roboflow ShelfGuard AI — Real-Time Planogram & Stock Inspector
 
-FastAPI backend + React/Vite/Tailwind dashboard that sends a shelf photo to a Roboflow Workflow and post-processes the detections (edge/glass reflections, front-row vs back-row depth, empty gaps).
+Computer vision models often break down when exposed to real-world store environments—glass door reflections trigger false positives, and 2D cameras struggle to tell customer-facing products apart from obscured back-row stock.
+
+I built ShelfGuard AI to bridge that gap between raw model inference and actual retail operations. The full-stack app connects a custom Roboflow Workflow to a FastAPI backend and an interactive React dashboard, adding real-time post-processing logic to solve physical edge cases on the fly:
+
+Facings vs. Depth Disambiguation: Implemented dynamic bounding-box area heuristics to separate front-row facings from partially hidden back-row stock in real time, preserving accurate visual compliance metrics without model retraining.
+
+ROI Glare & Edge Filtering: Stripped out false detections caused by cooler glass reflections along the door edges.
+
+Actionable Operational KPIs: Generated instant out-of-stock gap alerts and inventory counters directly over the interactive canvas overlay.
+
+Tech Stack: Roboflow Workflows & Inference SDK, FastAPI, Python, React, Tailwind CSS.
 
 ```
 backend/    FastAPI app (main.py, requirements.txt)
